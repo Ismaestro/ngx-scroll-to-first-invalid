@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<form id="test-form" [formGroup]="testForm" ngxScrollToFirstInvalid>
+  <input id="test-input1" type="text" class="input" [formControl]="testForm.get('someText1')">
+  <br>
+  <input id="test-input2" type="text" class="input" [formControl]="testForm.get('someText2')">
+  <br>
+  <input id="test-input3" type="text" class="input" [formControl]="testForm.get('someText3')">
+  <br>
+  <input id="test-input4" type="text" class="input" [formControl]="testForm.get('someText4')">
+  <br>
+  <input id="test-input5" type="text" class="input" [formControl]="testForm.get('someText5')">
+  <br>
+  <input id="test-input6" type="text" class="input" [formControl]="testForm.get('someText6')">
+  <br>
+  <input id="test-input7" type="text" class="input" [formControl]="testForm.get('someText7')">
+  <br>
+  <input id="test-input8" type="text" class="input" [formControl]="testForm.get('someText8')">
+  <br>
+  <input id="test-input9" type="text" class="input" [formControl]="testForm.get('someText9')">
+  <br>
+  <input id="test-input10" type="text" class="input" [formControl]="testForm.get('someText10')">
+  <br>
+  <button id="test-button"
+          form="test-form"
+          (click)="saveForm()">
+  </button>
+</form>
