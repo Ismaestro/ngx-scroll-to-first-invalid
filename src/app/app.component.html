@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<form id="test-form" [formGroup]="testForm" ngxScrollToFirstInvalid>
+<form [formGroup]="testForm" ngxScrollToFirstInvalid>
   <input id="test-input1" type="text" class="input" [formControl]="testForm.get('someText1')">
   <br>
   <input id="test-input2" type="text" class="input" [formControl]="testForm.get('someText2')">
@@ -20,8 +20,5 @@
   <br>
   <input id="test-input10" type="text" class="input" [formControl]="testForm.get('someText10')">
   <br>
-  <button id="test-button"
-          form="test-form"
-          (click)="saveForm()">
-  </button>
+  <button (click)="saveForm()"></button>
 </form>

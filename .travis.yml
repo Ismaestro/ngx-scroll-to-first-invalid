@@ -1,0 +1,45 @@
+#.travis.yml
+
+sudo: required
+
+dist: trusty
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+language: node_js
+
+node_js:
+  - 8.9
+
+branches:
+  only:
+    - master
+
+before_script:
+  - set -e
+  - npm install
+  - npm run build:library
+  - npm install -g angular-cli-ghpages
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+script:
+  - npm run lint
+  - npm run test
+  - npm run e2e
+  - ng build --prod --base-href /
+
+after_success:
+  - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
+      angular-cli-ghpages --repo=https://GH_TOKEN@$GH_REPO --name="New release" --email=$EMAIL;
+    fi
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
