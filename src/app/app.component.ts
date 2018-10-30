@@ -20,8 +20,15 @@ export class AppComponent {
       someText7: ['', [Validators.required]],
       someText8: ['', [Validators.required]],
       someText9: ['', [Validators.required]],
-      someText10: ['', [Validators.required]]
+      someText10: ['', [Validators.required]],
+      nestedGroup: this.formBuilder.group({
+        someText11: [''],
+      }, {validator: [this.alwaysFalse]})
     });
+  }
+
+  alwaysFalse() {
+    return {'asdfsaf': true};
   }
 
   saveForm() {
