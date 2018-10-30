@@ -23,7 +23,7 @@ npm install @ismaestro/ngx-scroll-to-first-invalid --save
 ```ts
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {NgxScrollToFirstInvalidModule} from '@ismaestro/ngx-scroll-to-first-invalid/ngx-scroll-to-first-invalid.module';
+import {NgxExampleLibraryModule} from '@ismaestro/ngx-example-library';
 
 @NgModule({
     imports: [
