@@ -8,5 +8,5 @@
     "/**\n * Generated bundle index. Do not edit.\n */\n\nexport * from './public_api';\n\nexport {NgxScrollToFirstInvalidDirective as ɵa} from './ngx-scroll-to-first-invalid.directive';"
   ],
   "names": [],
-  "mappings": ";;;;;;;AAIA,8CAAc,cAAc,CAAC;AAE7B,OAAO,EAAC,gCAAgC,IAAI,EAAE,EAAC,MAAM,yCAAyC,CAAC"
+  "mappings": ";;;;;;;AAIA,6DAA6B;AAE7B,OAAO,EAAC,gCAAgC,IAAI,EAAE,EAAC,gDAAgD"
 }

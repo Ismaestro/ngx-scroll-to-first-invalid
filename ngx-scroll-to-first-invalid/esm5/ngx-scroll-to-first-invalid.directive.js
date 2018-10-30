@@ -1,8 +1,8 @@
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+ * @suppress {checkTypes} checked by tsc
  */
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from "@angular/core";
 var NgxScrollToFirstInvalidDirective = /** @class */ (function () {
     /**
      * @param {?} el
@@ -16,8 +16,7 @@ var NgxScrollToFirstInvalidDirective = /** @class */ (function () {
      */
     NgxScrollToFirstInvalidDirective.scrollToElement = function (element) {
         if (element) {
-            /** @type {?} */
-            var distance = window.pageYOffset - Math.abs(element.getBoundingClientRect().y);
+            var /** @type {?} */ distance = window.pageYOffset - Math.abs(element.getBoundingClientRect().y);
             window.scroll({
                 behavior: 'smooth',
                 left: 0,
@@ -35,7 +34,7 @@ var NgxScrollToFirstInvalidDirective = /** @class */ (function () {
      * @return {?}
      */
     NgxScrollToFirstInvalidDirective.markFormGroupTouched = function (formGroup) {
-        (((Object))).values(formGroup.controls).forEach(function (control) {
+        ((Object)).values(formGroup.controls).forEach(function (control) {
             control.markAsTouched();
             if (control.controls) {
                 NgxScrollToFirstInvalidDirective.markFormGroupTouched(control);
@@ -50,15 +49,13 @@ var NgxScrollToFirstInvalidDirective = /** @class */ (function () {
         event.preventDefault();
         if (!this.formGroup.valid) {
             NgxScrollToFirstInvalidDirective.markFormGroupTouched(this.formGroup);
-            /** @type {?} */
-            var formControlInvalid = this.el.nativeElement.querySelector('.form-control.ng-invalid');
+            var /** @type {?} */ formControlInvalid = this.el.nativeElement.querySelector('.form-control.ng-invalid');
             if (formControlInvalid) {
                 return NgxScrollToFirstInvalidDirective.scrollToElement(formControlInvalid);
             }
             else {
                 // The first element is the global form and here we are looking for the first nested form
-                /** @type {?} */
-                var formGroupInvalid = this.el.nativeElement.querySelectorAll('.form.ng-invalid');
+                var /** @type {?} */ formGroupInvalid = this.el.nativeElement.querySelectorAll('.form.ng-invalid');
                 if (formGroupInvalid && formGroupInvalid.length) {
                     return NgxScrollToFirstInvalidDirective.scrollToElement(formGroupInvalid[0]);
                 }
@@ -72,14 +69,24 @@ export { NgxScrollToFirstInvalidDirective };
 NgxScrollToFirstInvalidDirective.decorators = [
     { type: Directive, args: [{ selector: '[ngxScrollToFirstInvalid]' },] },
 ];
+/** @nocollapse */
 NgxScrollToFirstInvalidDirective.ctorParameters = function () { return [
-    { type: ElementRef }
+    { type: ElementRef, },
 ]; };
 NgxScrollToFirstInvalidDirective.propDecorators = {
-    formGroup: [{ type: Input }],
-    onSubmit: [{ type: HostListener, args: ['submit', ['$event'],] }]
+    "formGroup": [{ type: Input },],
+    "onSubmit": [{ type: HostListener, args: ['submit', ['$event'],] },],
 };
-if (false) {
+function NgxScrollToFirstInvalidDirective_tsickle_Closure_declarations() {
+    /** @type {!Array<{type: !Function, args: (undefined|!Array<?>)}>} */
+    NgxScrollToFirstInvalidDirective.decorators;
+    /**
+     * @nocollapse
+     * @type {function(): !Array<(null|{type: ?, decorators: (undefined|!Array<{type: !Function, args: (undefined|!Array<?>)}>)})>}
+     */
+    NgxScrollToFirstInvalidDirective.ctorParameters;
+    /** @type {!Object<string,!Array<{type: !Function, args: (undefined|!Array<?>)}>>} */
+    NgxScrollToFirstInvalidDirective.propDecorators;
     /** @type {?} */
     NgxScrollToFirstInvalidDirective.prototype.formGroup;
     /** @type {?} */

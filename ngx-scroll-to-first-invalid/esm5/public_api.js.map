@@ -8,5 +8,5 @@
     "/*\n * Public API Surface of ngx-scroll-to-first-invalid\n */\n\nexport * from './ngx-scroll-to-first-invalid.module';\n"
   ],
   "names": [],
-  "mappings": ";;;;;;;AAIA,8CAAc,sCAAsC,CAAC"
+  "mappings": ";;;;;;;AAIA,qFAAqD"
 }

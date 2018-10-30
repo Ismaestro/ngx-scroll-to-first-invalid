@@ -8,5 +8,5 @@
     "import {NgModule} from '@angular/core';\nimport {NgxScrollToFirstInvalidDirective} from './ngx-scroll-to-first-invalid.directive';\n\n@NgModule({\n  imports: [],\n  declarations: [NgxScrollToFirstInvalidDirective],\n  exports: [NgxScrollToFirstInvalidDirective]\n})\nexport class NgxScrollToFirstInvalidModule {\n}\n"
   ],
   "names": [],
-  "mappings": ";;;;AAAA,OAAO,EAAC,QAAQ,EAAC,MAAM,eAAe,CAAC;AACvC,OAAO,EAAC,gCAAgC,EAAC,MAAM,yCAAyC,CAAC;AAOzF,MAAM;;;YALL,QAAQ,SAAC;gBACR,OAAO,EAAE,EAAE;gBACX,YAAY,EAAE,CAAC,gCAAgC,CAAC;gBAChD,OAAO,EAAE,CAAC,gCAAgC,CAAC;aAC5C"
+  "mappings": ";;;;AAAA,OAAO,EAAC,QAAQ,EAAC,sBAAsB;AACvC,OAAO,EAAC,gCAAgC,EAAC,gDAAgD;AAOzF,MAAM;;;YALL,QAAQ,SAAC;gBACR,OAAO,EAAE,EAAE;gBACX,YAAY,EAAE,CAAC,gCAAgC,CAAC;gBAChD,OAAO,EAAE,CAAC,gCAAgC,CAAC;aAC5C"
 }
