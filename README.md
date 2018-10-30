@@ -44,21 +44,6 @@ export class AppModule { }
 </form>
 ```
 
-```ts
-export class AppComponent {
-  testForm: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) {
-    this.testForm = this.formBuilder.group({
-      someText1: ['', [Validators.required]]
-    });
-  }
-
-  saveForm() {
-  }
-}
-```
-
 ## Contributing
 
 - Please see the CONTRIBUTING file for guidelines.
