@@ -1,6 +1,6 @@
 {
-  "name": "ngx-scroll",
-  "version": "0.0.0",
+  "name": "ngx-scroll-to-first-invalid",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,7 +11,10 @@
     "ci": "npm run lint && npm run test && npm run e2e && npm run build:prod",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "sh scripts/deploy.sh"
+    "deploy": "sh scripts/deploy.sh",
+    "release:minor": "standard-version --release-as minor && git push --follow-tags origin master",
+    "release:major": "standard-version --release-as major && git push --follow-tags origin master",
+    "update": "ng update --all --force"
   },
   "private": true,
   "dependencies": {
@@ -48,6 +51,7 @@
     "karma-jasmine-html-reporter": "0.2.2",
     "ng-packagr": "3.0.0-rc.2",
     "protractor": "5.3.0",
+    "standard-version": "^4.4.0",
     "ts-node": "5.0.1",
     "tsickle": "0.25.5",
     "tslib": "1.7.1",

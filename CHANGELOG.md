@@ -1,0 +1,12 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.1.0"></a>
+# 0.1.0 (2018-10-30)
+
+
+### Features
+
+* **library:** move files from lib folder and add tests ([0515f57](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/commit/0515f57))
+* **scripts:** add deploy scripts ([0a1a7b0](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/commit/0a1a7b0))
