@@ -1,24 +1,23 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <form [formGroup]="testForm" ngxScrollToFirstInvalid>
-  <input id="test-input1" type="text" class="input" [formControl]="testForm.get('someText1')">
+  <input id="test-input1" type="text" class="input" formControlName="someText1">
   <br>
-  <input id="test-input2" type="text" class="input" [formControl]="testForm.get('someText2')">
+  <input id="test-input2" type="text" class="input" formControlName="someText2">
   <br>
-  <input id="test-input3" type="text" class="input" [formControl]="testForm.get('someText3')">
+  <input id="test-input3" type="text" class="input" formControlName="someText3">
   <br>
-  <input id="test-input4" type="text" class="input" [formControl]="testForm.get('someText4')">
+  <input id="test-input4" type="text" class="input" formControlName="someText4">
   <br>
-  <input id="test-input5" type="text" class="input" [formControl]="testForm.get('someText5')">
+  <input id="test-input5" type="text" class="input" formControlName="someText5">
   <br>
-  <input id="test-input6" type="text" class="input" [formControl]="testForm.get('someText6')">
+  <input id="test-input6" type="text" class="input" formControlName="someText6">
   <br>
-  <input id="test-input7" type="text" class="input" [formControl]="testForm.get('someText7')">
+  <input id="test-input7" type="text" class="input" formControlName="someText7">
   <br>
-  <input id="test-input8" type="text" class="input" [formControl]="testForm.get('someText8')">
+  <input id="test-input8" type="text" class="input" formControlName="someText8">
   <br>
-  <input id="test-input9" type="text" class="input" [formControl]="testForm.get('someText9')">
+  <input id="test-input9" type="text" class="input" formControlName="someText9">
   <br>
-  <input id="test-input10" type="text" class="input" [formControl]="testForm.get('someText10')">
+  <input id="test-input10" type="text" class="input" formControlName="someText10">
   <br>
   <button (click)="saveForm()"></button>
 </form>

@@ -39,7 +39,7 @@ export class AppModule { }
 
 ```html
 <form [formGroup]="testForm" ngxScrollToFirstInvalid>
-  <input id="test-input1" type="text" [formControl]="testForm.get('someText1')">
+  <input id="test-input1" type="text" formControlName="someText1">
   <button (click)="saveForm()"></button>
 </form>
 ```
