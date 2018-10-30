@@ -2,7 +2,7 @@ import {Directive, ElementRef, HostListener, Input} from '@angular/core';
 import {NgForm} from '@angular/forms';
 
 @Directive({selector: '[ngxScrollToFirstInvalid]'})
-export class ngxScrollToFirstInvalidDirective {
+export class NgxScrollToFirstInvalidDirective {
   @Input() formGroup: NgForm;
 
   constructor(private el: ElementRef) {
@@ -31,7 +31,7 @@ export class ngxScrollToFirstInvalidDirective {
       control.markAsTouched();
 
       if (control.controls) {
-        ngxScrollToFirstInvalidDirective.markFormGroupTouched(control);
+        NgxScrollToFirstInvalidDirective.markFormGroupTouched(control);
       }
     });
   }
@@ -41,21 +41,21 @@ export class ngxScrollToFirstInvalidDirective {
     event.preventDefault();
 
     if (!this.formGroup.valid) {
-      ngxScrollToFirstInvalidDirective.markFormGroupTouched(this.formGroup);
+      NgxScrollToFirstInvalidDirective.markFormGroupTouched(this.formGroup);
 
       const formControlInvalid = this.el.nativeElement.querySelector('.form-control.ng-invalid');
 
       if (formControlInvalid) {
-        return ngxScrollToFirstInvalidDirective.scrollToElement(formControlInvalid);
+        return NgxScrollToFirstInvalidDirective.scrollToElement(formControlInvalid);
       } else {
         // The first element is the global form and here we are looking for the first nested form
         const formGroupInvalid = this.el.nativeElement.querySelectorAll('.form.ng-invalid');
         if (formGroupInvalid && formGroupInvalid.length) {
-          return ngxScrollToFirstInvalidDirective.scrollToElement(formGroupInvalid[0]);
+          return NgxScrollToFirstInvalidDirective.scrollToElement(formGroupInvalid[0]);
         }
       }
 
-      return ngxScrollToFirstInvalidDirective.scrollToElement(this.el.nativeElement);
+      return NgxScrollToFirstInvalidDirective.scrollToElement(this.el.nativeElement);
     }
   }
 }

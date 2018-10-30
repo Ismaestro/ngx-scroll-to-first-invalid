@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
-import {ngxScrollToFirstInvalidDirective} from "./ngx-scroll-to-first-invalid.directive";
+import {NgModule} from '@angular/core';
+import {NgxScrollToFirstInvalidDirective} from './ngx-scroll-to-first-invalid.directive';
 
 @NgModule({
-  imports: [
-  ],
-  declarations: [ngxScrollToFirstInvalidDirective],
-  exports: [ngxScrollToFirstInvalidDirective]
+  imports: [],
+  declarations: [NgxScrollToFirstInvalidDirective],
+  exports: [NgxScrollToFirstInvalidDirective]
 })
 export class NgxScrollToFirstInvalidModule {
 }
