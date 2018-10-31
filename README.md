@@ -20,7 +20,7 @@ Simple example using ngx-scroll-to-first-invalid [here](https://ismaestro.github
 First you need to install the npm module:
 
 ```sh
-npm install @ismaestro/ngx-scroll-to-first-invalid --save
+npm i @ismaestro/ngx-scroll-to-first-invalid --save
 ```
 
 ## Usage
