@@ -8,6 +8,9 @@ Simple example using ngx-scroll-to-first-invalid [here](https://ismaestro.github
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contributors](#contributors)
 
 ## Installation
 
