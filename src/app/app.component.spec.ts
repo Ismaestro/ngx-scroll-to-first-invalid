@@ -1,8 +1,8 @@
 import {async, TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgxScrollToFirstInvalidModule} from '../../projects/ngx-scroll-to-first-invalid/src/ngx-scroll-to-first-invalid.module';
 import {AlertModule} from 'ngx-bootstrap/alert';
+import {NgxScrollToFirstInvalidModule} from '../../projects/ngx-scroll-to-first-invalid-lib/src/ngx-scroll-to-first-invalid.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-scroll": {
+    "ngx-scroll-to-first-invalid": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,17 +13,27 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-scroll",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
+              {
+                "input": "node_modules/bootstrap/dist/css/bootstrap.css"
+              },
               "src/styles.css"
             ],
             "scripts": []
@@ -51,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-scroll:build"
+            "browserTarget": "ngx-scroll-to-first-invalid:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-scroll:build:production"
+              "browserTarget": "ngx-scroll-to-first-invalid:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-scroll:build"
+            "browserTarget": "ngx-scroll-to-first-invalid:build"
           }
         },
         "test": {
@@ -96,7 +106,7 @@
         }
       }
     },
-    "ngx-scroll-e2e": {
+    "ngx-scroll-to-first-invalid-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -104,7 +114,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-scroll:serve"
+            "devServerTarget": "ngx-scroll-to-first-invalid:serve"
           }
         },
         "lint": {
@@ -118,38 +128,38 @@
         }
       }
     },
-    "ngx-scroll-to-first-invalid": {
-      "root": "projects/ngx-scroll-to-first-invalid",
-      "sourceRoot": "projects/ngx-scroll-to-first-invalid/src",
+    "ngx-scroll-to-first-invalid-lib": {
+      "root": "projects/ngx-scroll-to-first-invalid-lib",
+      "sourceRoot": "projects/ngx-scroll-to-first-invalid-lib/src",
       "projectType": "library",
       "prefix": "tm",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ngx-scroll-to-first-invalid/tsconfig.lib.json",
-            "project": "projects/ngx-scroll-to-first-invalid/ng-package.json"
+            "tsConfig": "projects/ngx-scroll-to-first-invalid-lib/tsconfig.lib.json",
+            "project": "projects/ngx-scroll-to-first-invalid-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "projects/ngx-scroll-to-first-invalid/ng-package.prod.json"
+              "project": "projects/ngx-scroll-to-first-invalid-lib/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-scroll-to-first-invalid/src/test.ts",
-            "tsConfig": "projects/ngx-scroll-to-first-invalid/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-scroll-to-first-invalid/karma.conf.js"
+            "main": "projects/ngx-scroll-to-first-invalid-lib/src/test.ts",
+            "tsConfig": "projects/ngx-scroll-to-first-invalid-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-scroll-to-first-invalid-lib/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-scroll-to-first-invalid/tsconfig.lib.json",
-              "projects/ngx-scroll-to-first-invalid/tsconfig.spec.json"
+              "projects/ngx-scroll-to-first-invalid-lib/tsconfig.lib.json",
+              "projects/ngx-scroll-to-first-invalid-lib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -159,5 +169,5 @@
       }
     }
   },
-  "defaultProject": "ngx-scroll"
+  "defaultProject": "ngx-scroll-to-first-invalid"
 }

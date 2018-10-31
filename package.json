@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod",
-    "build:library": "ng build ngx-scroll-to-first-invalid",
+    "build:library": "ng build ngx-scroll-to-first-invalid-lib",
     "test": "ng test",
     "ci": "npm run lint && npm run test && npm run e2e && npm run build:prod",
     "lint": "ng lint",
