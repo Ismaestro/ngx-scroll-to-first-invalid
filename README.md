@@ -3,7 +3,10 @@
 Angular directive to scroll to first invalid input inside a form.
 
 Simple example using ngx-scroll-to-first-invalid [here](https://ismaestro.github.io/ngx-scroll-to-first-invalid)
-![](https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif)
+
+<p align="center">
+  <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
+</p>
 
 ## Table of Contents
 * [Installation](#installation)
