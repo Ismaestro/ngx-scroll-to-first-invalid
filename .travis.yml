@@ -32,7 +32,7 @@ script:
   - npm run lint
   - npm run test
   - npm run e2e
-  - ng build --prod --base-href /
+  - ng build --prod --base-href /ngx-scroll-to-first-invalid/
 
 after_success:
   - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then

@@ -1,36 +1,45 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  testForm: FormGroup;
+  shopForm: FormGroup;
+  formValidAndSubmitted: boolean;
 
   constructor(private formBuilder: FormBuilder) {
-    this.testForm = this.formBuilder.group({
-      someText1: ['', [Validators.required]],
-      someText2: ['', [Validators.required]],
-      someText3: ['', [Validators.required]],
-      someText4: ['', [Validators.required]],
-      someText5: ['', [Validators.required]],
-      someText6: ['', [Validators.required]],
-      someText7: ['', [Validators.required]],
-      someText8: ['', [Validators.required]],
-      someText9: ['', [Validators.required]],
-      someText10: ['', [Validators.required]],
-      nestedGroup: this.formBuilder.group({
-        someText11: [''],
-      }, {validator: [this.alwaysFalse]})
+    this.shopForm = formBuilder.group({
+      'firstName': ['', Validators.required],
+      'lastName': ['', Validators.required],
+      'username': ['', Validators.required],
+      'email': ['', AppComponent.emailValidator],
+      'address': ['', Validators.required],
+      'address2': [''],
+      'country': ['', Validators.required],
+      'state': ['', Validators.required],
+      'zip': ['', Validators.required]
     });
   }
 
-  alwaysFalse() {
-    return {'asdfsaf': true};
+  static emailValidator(control: any) {
+    // RFC 2822 compliant regex
+    if (control.value) {
+      /* tslint:disable */
+      if (control.value.match(/[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/)) {
+        /* tslint:enable */
+        return null;
+      } else {
+        return {'invalidEmailAddress': true};
+      }
+
+    }
   }
 
-  saveForm() {
+  submit() {
+    if (this.shopForm.valid) {
+      this.formValidAndSubmitted = true;
+    }
   }
 }
