@@ -4,9 +4,11 @@
     Angular directive to scroll to first invalid input inside a form on submit
     <br>
     <a href="https://github.com/Ismaestro/ampjucks/issues/new?template=bug.md">Report bug</a>
-    ·
+    ·https://ismaestro.github.io/ngx-scroll-to-first-invalid/
     <a href="https://github.com/Ismaestro/ampjucks/issues/new?template=feature.md&labels=feature">Request feature</a>
     <br>
+    <br>
+    <a href="https://ismaestro.github.io/ngx-scroll-to-first-invalid/">LIVE DEMO</a>
     <br>
     <a href="https://angular.io/">
       <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
