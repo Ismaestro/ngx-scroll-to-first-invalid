@@ -1,29 +1,38 @@
-# @ngx-scroll-to-first-invalid ![travis](https://travis-ci.org/Ismaestro/ngx-scroll-to-first-invalid.svg?branch=master)
-
-Angular directive to scroll to first invalid input inside a form.
-
-Simple example using ngx-scroll-to-first-invalid [here](https://ismaestro.github.io/ngx-scroll-to-first-invalid)
-
 <p align="center">
-  <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
+  <a href="https://angular.io/">
+    <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
+  </a>
+  
+  <h1 align="center">@ngx-scroll-to-first-invalid</h1>
+
+  <p align="center">
+    Angular directive to scroll to first invalid input inside a form on submit
+    <br>
+    <a href="https://github.com/Ismaestro/ampjucks/issues/new?template=bug.md">Report bug</a>
+    ·
+    <a href="https://github.com/Ismaestro/ampjucks/issues/new?template=feature.md&labels=feature">Request feature</a>
+  </p>
 </p>
 
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contributors](#contributors)
+## Table of contents
 
-## Installation
+- [Status](#status)
+- [Quick start](#quick-start)
+- [Bugs and feature requests](#bugs-and-feature-requests)
+- [Creators](#creators)
+- [Copyright and license](#copyright-and-license)
+
+## Status
+
+![travis](https://travis-ci.org/Ismaestro/ngx-scroll-to-first-invalid.svg?branch=master)
+
+## Quick start
 
 First you need to install the npm module:
 
 ```sh
 npm i @ismaestro/ngx-scroll-to-first-invalid --save
 ```
-
-## Usage
 
 #### 1. Import the `NgxScrollToFirstInvalidModule`:
 
@@ -51,18 +60,23 @@ export class AppModule { }
 </form>
 ```
 
-## Contributing
+Here there is an example using ngx-scroll-to-first-invalid [here](https://ismaestro.github.io/ngx-scroll-to-first-invalid)
 
-- Please see the CONTRIBUTING file for guidelines.
-- Create **pull requests, submit bugs, suggest new features** or documentation updates :wrench:
+## Bugs and feature requests
 
-## License
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Ismaestro/ampjucks/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Ismaestro/ampjucks/issues/new).
 
-MIT
+## Creators
 
-## Contributors
+**Ismael Ramos**
 
-If you have an idea or you want to do something, tell me or just do it!
-I'm always happy to hear your feedback!
+- <https://github.com/ismaestro>
+
+<a href='https://ko-fi.com/S6S5LMVR' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+## Copyright and license
+
+Code and documentation copyright 2011-2018 the authors. Code released under the [MIT License](https://github.com/Ismaestro/ampjucks/blob/master/LICENSE).
 
 Enjoy :metal:
+
