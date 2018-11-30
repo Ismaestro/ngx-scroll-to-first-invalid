@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://angular.io/">
-    <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
-  </a>
-  
   <h1 align="center">@ngx-scroll-to-first-invalid</h1>
-
   <p align="center">
+    <a href="https://angular.io/">
+      <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
+    </a>
+    <br>
+    <br>
     Angular directive to scroll to first invalid input inside a form on submit
     <br>
     <a href="https://github.com/Ismaestro/ampjucks/issues/new?template=bug.md">Report bug</a>
