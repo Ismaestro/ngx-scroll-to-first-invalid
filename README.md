@@ -3,9 +3,9 @@
   <p align="center">
     Angular directive to scroll to first invalid input inside a form on submit
     <br>
-    <a href="https://github.com/Ismaestro/ampjucks/issues/new?template=bug.md">Report bug</a>
-    ·https://ismaestro.github.io/ngx-scroll-to-first-invalid/
-    <a href="https://github.com/Ismaestro/ampjucks/issues/new?template=feature.md&labels=feature">Request feature</a>
+    <a href="https://github.com/Ismaestro/ngx-scroll-to-first-invalid/issues/new?template=bug.md">Report bug</a>
+    ·
+    <a href="https://github.com/Ismaestro/ngx-scroll-to-first-invalid/issues/new?template=feature.md&labels=feature">Request feature</a>
     <br>
     <br>
     <a href="https://ismaestro.github.io/ngx-scroll-to-first-invalid/">LIVE DEMO</a>
@@ -66,7 +66,7 @@ Here there is an example using ngx-scroll-to-first-invalid [here](https://ismaes
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Ismaestro/ampjucks/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Ismaestro/ampjucks/issues/new).
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/issues/new).
 
 ## Creators
 
@@ -78,7 +78,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Copyright and license
 
-Code and documentation copyright 2011-2018 the authors. Code released under the [MIT License](https://github.com/Ismaestro/ampjucks/blob/master/LICENSE).
+Code and documentation copyright 2011-2018 the authors. Code released under the [MIT License](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/blob/master/LICENSE).
 
 Enjoy :metal:
 
