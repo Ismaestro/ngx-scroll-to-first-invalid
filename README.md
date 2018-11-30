@@ -10,7 +10,7 @@
     <br>
     <a href="https://ismaestro.github.io/ngx-scroll-to-first-invalid/">LIVE DEMO</a>
     <br>
-    <a href="https://angular.io/">
+    <a href="https://ismaestro.github.io/ngx-scroll-to-first-invalid/">
       <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
     </a>
   </p>
