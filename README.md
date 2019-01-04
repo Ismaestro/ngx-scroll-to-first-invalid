@@ -9,6 +9,7 @@
     <a href="https://ismaestro.github.io/ngx-scroll-to-first-invalid/">
       <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
     </a>
+    <br>
     <a href="https://github.com/Ismaestro/ngx-scroll-to-first-invalid/issues/new?template=bug.md">Report bug</a>
     ·
     <a href="https://github.com/Ismaestro/ngx-scroll-to-first-invalid/issues/new?template=feature.md&labels=feature">Request feature</a>
