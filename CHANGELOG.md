@@ -1,6 +1,10 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [3.0.0](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/compare/v2.0.0...v3.0.0) (2019-06-17)
+
+
 
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/compare/v1.0.0...v2.0.0) (2018-10-30)
