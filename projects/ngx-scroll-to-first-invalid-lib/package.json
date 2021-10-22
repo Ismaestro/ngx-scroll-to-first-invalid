@@ -4,5 +4,10 @@
   "peerDependencies": {
     "@angular/common": "6.x || 7.x || 8.x",
     "@angular/core": "6.x || 7.x || 8.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ismaestro/ngx-scroll-to-first-invalid.git",
+    "directory": "projects/ngx-scroll-to-first-invalid-lib"
   }
 }
