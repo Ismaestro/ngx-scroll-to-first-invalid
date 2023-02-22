@@ -103,16 +103,19 @@
       "prefix": "tm",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ngx-scroll-to-first-invalid-lib/tsconfig.lib.json",
             "project": "projects/ngx-scroll-to-first-invalid-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "projects/ngx-scroll-to-first-invalid-lib/ng-package.prod.json"
+              "tsConfig": "projects/ngx-scroll-to-first-invalid-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-scroll-to-first-invalid-lib/tsconfig.lib.json"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
