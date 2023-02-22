@@ -80,7 +80,7 @@ and search for existing and closed issues. If your problem or idea is not addres
 
 ## Copyright and license
 
-Code and documentation copyright 2011-2018 the authors. Code released under the
+Code and documentation copyright 2018-2023 the authors. Code released under the
 [MIT License](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/blob/master/LICENSE).
 
 Enjoy :metal:
