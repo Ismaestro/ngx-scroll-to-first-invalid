@@ -1,6 +1,6 @@
 {
   "name": "ngx-scroll-to-first-invalid",
-  "version": "16.0.0",
+  "version": "14.0.0",
   "scripts": {
     "prepare": "husky install",
     "start": "ng serve",
