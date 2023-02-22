@@ -1,21 +1,20 @@
-import {Directive, ElementRef, HostListener, Input} from '@angular/core';
-import {NgForm} from '@angular/forms';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
-@Directive({selector: '[ngxScrollToFirstInvalid]'})
+@Directive({ selector: '[ngxScrollToFirstInvalid]' })
 export class NgxScrollToFirstInvalidDirective {
-  @Input() formGroup: NgForm;
+  @Input() formGroup: FormGroup | null = null;
 
-  constructor(private el: ElementRef) {
-  }
+  constructor(private el: ElementRef) {}
 
-  static scrollToElement(element) {
+  static scrollToElement(element: HTMLElement) {
     if (element) {
       const distance = window.pageYOffset - Math.abs(element.getBoundingClientRect().y);
 
       window.scroll({
         behavior: 'smooth',
         left: 0,
-        top: element.getBoundingClientRect().top + window.scrollY - 150
+        top: element.getBoundingClientRect().top + window.scrollY - 150,
       });
 
       setTimeout(() => {
@@ -26,8 +25,8 @@ export class NgxScrollToFirstInvalidDirective {
     }
   }
 
-  static markFormGroupTouched(formGroup) {
-    (<any>Object).values(formGroup.controls).forEach(control => {
+  static markFormGroupTouched(formGroup: FormGroup | null) {
+    (<any>Object).values(formGroup?.controls).forEach((control: FormGroup) => {
       control.markAsTouched();
 
       if (control.controls) {
@@ -37,10 +36,10 @@ export class NgxScrollToFirstInvalidDirective {
   }
 
   @HostListener('submit', ['$event'])
-  onSubmit(event) {
+  onSubmit(event: Event) {
     event.preventDefault();
 
-    if (!this.formGroup.valid) {
+    if (!this.formGroup?.valid) {
       NgxScrollToFirstInvalidDirective.markFormGroupTouched(this.formGroup);
 
       const formControlInvalid = this.el.nativeElement.querySelector('.ng-invalid');

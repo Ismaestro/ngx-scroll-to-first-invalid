@@ -1,8 +1,8 @@
-import {async, TestBed} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AlertModule} from 'ngx-bootstrap/alert';
-import {NgxScrollToFirstInvalidModule} from '../../projects/ngx-scroll-to-first-invalid-lib/src/ngx-scroll-to-first-invalid.module';
+import { async, TestBed } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { NgxScrollToFirstInvalidModule } from '../../projects/ngx-scroll-to-first-invalid-lib/src/ngx-scroll-to-first-invalid.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -12,11 +12,9 @@ describe('AppComponent', () => {
         ReactiveFormsModule,
         ReactiveFormsModule,
         AlertModule.forRoot(),
-        NgxScrollToFirstInvalidModule
+        NgxScrollToFirstInvalidModule,
       ],
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
     }).compileComponents();
   }));
   it('should create the app', async(() => {

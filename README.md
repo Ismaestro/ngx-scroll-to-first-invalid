@@ -40,34 +40,35 @@ npm i @ismaestro/ngx-scroll-to-first-invalid --save
 #### 1. Import the `NgxScrollToFirstInvalidModule`:
 
 ```ts
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {NgxScrollToFirstInvalidModule} from '@ismaestro/ngx-scroll-to-first-invalid';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { NgxScrollToFirstInvalidModule } from '@ismaestro/ngx-scroll-to-first-invalid';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        NgxScrollToFirstInvalidModule
-    ],
-    bootstrap: [AppComponent]
+  imports: [BrowserModule, NgxScrollToFirstInvalidModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 #### 2. Use the directive inside a form:
 
 ```html
 <form [formGroup]="testForm" ngxScrollToFirstInvalid>
-  <input id="test-input1" type="text" formControlName="someText1">
+  <input id="test-input1" type="text" formControlName="someText1" />
   <button (click)="saveForm()"></button>
 </form>
 ```
 
-Here there is an example using ngx-scroll-to-first-invalid [here](https://ismaestro.github.io/ngx-scroll-to-first-invalid)
+Here there is an example using ngx-scroll-to-first-invalid
+[here](https://ismaestro.github.io/ngx-scroll-to-first-invalid)
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/issues/new).
+Have a bug or a feature request? Please first read the
+[issue guidelines](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/blob/master/CONTRIBUTING.md)
+and search for existing and closed issues. If your problem or idea is not addressed yet,
+[please open a new issue](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/issues/new).
 
 ## Creators
 
@@ -79,7 +80,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Copyright and license
 
-Code and documentation copyright 2011-2018 the authors. Code released under the [MIT License](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/blob/master/LICENSE).
+Code and documentation copyright 2011-2018 the authors. Code released under the
+[MIT License](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/blob/master/LICENSE).
 
 Enjoy :metal:
-

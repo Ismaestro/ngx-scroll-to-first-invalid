@@ -1,40 +1,47 @@
-import {Component} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
   shopForm: FormGroup;
   formValidAndSubmitted: boolean;
 
   constructor(private formBuilder: FormBuilder) {
+    this.formValidAndSubmitted = false;
     this.shopForm = formBuilder.group({
-      'firstName': ['', Validators.required],
-      'lastName': ['', Validators.required],
-      'username': ['', Validators.required],
-      'email': ['', AppComponent.emailValidator],
-      'address': ['', Validators.required],
-      'address2': [''],
-      'country': ['', Validators.required],
-      'state': ['', Validators.required],
-      'zip': ['', Validators.required]
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      username: ['', Validators.required],
+      email: ['', AppComponent.emailValidator],
+      address: ['', Validators.required],
+      address2: [''],
+      country: ['', Validators.required],
+      state: ['', Validators.required],
+      zip: ['', Validators.required],
     });
   }
 
-  static emailValidator(control: any) {
+  static emailValidator(control: FormControl) {
     // RFC 2822 compliant regex
     if (control.value) {
-      /* tslint:disable */
-      if (control.value.match(/[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/)) {
-        /* tslint:enable */
+      /* eslint:disable */
+      if (
+        control.value.match(
+          // eslint-disable-next-line security/detect-unsafe-regex
+          /[\w!#$%&'*+/=?^`{|}~-]+(?:\.[\w!#$%&'*+/=?^`{|}~-]+)*@(?:[\dA-Za-z](?:[\dA-Za-z-]*[\dA-Za-z])?\.)+[\dA-Za-z](?:[\dA-Za-z-]*[\dA-Za-z])?/
+        )
+      ) {
+        /* eslint:enable */
         return null;
       } else {
-        return {'invalidEmailAddress': true};
+        return { invalidEmailAddress: true };
       }
-
     }
+    return null;
   }
 
   submit() {
