@@ -14,7 +14,7 @@
     "release:minor": "standard-version --release-as minor && git push --follow-tags origin master",
     "release:major": "standard-version --release-as major && git push --follow-tags origin master",
     "deploy": "sh scripts/deploy.sh",
-    "update": "ng update --all --force"
+    "update": "ng update --force"
   },
   "husky": {
     "hooks": {
