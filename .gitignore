@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /coverage
+.angular
 
 # dependencies
 /node_modules
