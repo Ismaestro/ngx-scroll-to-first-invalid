@@ -4,19 +4,23 @@
   "newProjectRoot": "projects",
   "projects": {
     "ngx-scroll-to-first-invalid": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
-      "projectType": "application",
       "prefix": "app",
-      "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/ngx-scroll-to-first-invalid",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "browser": "src/main.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -46,14 +50,6 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": {
-                "scripts": true,
-                "styles": {
-                  "minify": true,
-                  "inlineCritical": false
-                },
-                "fonts": true
-              },
               "outputHashing": "all"
             }
           },
@@ -62,18 +58,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-scroll-to-first-invalid:build"
+            "buildTarget": "ngx-scroll-to-first-invalid:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-scroll-to-first-invalid:build:production"
+              "buildTarget": "ngx-scroll-to-first-invalid:build:production"
             }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ngx-scroll-to-first-invalid:build"
           }
         },
         "test": {
@@ -120,17 +110,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-scroll-to-first-invalid-lib/src/test.ts",
-            "tsConfig": "projects/ngx-scroll-to-first-invalid-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-scroll-to-first-invalid-lib/karma.conf.js"
+            "tsConfig": "projects/my-lib/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }
     }
   },
-  "defaultProject": "ngx-scroll-to-first-invalid",
   "cli": {
-    "analytics": false,
-    "schematicCollections": ["@angular-eslint/schematics"]
+    "analytics": false
   }
 }

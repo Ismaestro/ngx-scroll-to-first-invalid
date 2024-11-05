@@ -1,48 +1,28 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AlertComponent } from 'ngx-bootstrap/alert';
+import { NgxScrollToFirstInvalidDirective } from '../../projects/ngx-scroll-to-first-invalid-lib/src/lib/ngx-scroll-to-first-invalid.directive';
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
   templateUrl: './app.component.html',
+  standalone: true,
+  imports: [ReactiveFormsModule, AlertComponent, NgxScrollToFirstInvalidDirective],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  shopForm: FormGroup;
-  formValidAndSubmitted: boolean;
-
-  constructor(private formBuilder: FormBuilder) {
-    this.formValidAndSubmitted = false;
-    this.shopForm = formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      username: ['', Validators.required],
-      email: ['', AppComponent.emailValidator],
-      address: ['', Validators.required],
-      address2: [''],
-      country: ['', Validators.required],
-      state: ['', Validators.required],
-      zip: ['', Validators.required],
-    });
-  }
-
-  static emailValidator(control: FormControl) {
-    // RFC 2822 compliant regex
-    if (control.value) {
-      /* eslint:disable */
-      if (
-        control.value.match(
-          // eslint-disable-next-line security/detect-unsafe-regex
-          /[\w!#$%&'*+/=?^`{|}~-]+(?:\.[\w!#$%&'*+/=?^`{|}~-]+)*@(?:[\dA-Za-z](?:[\dA-Za-z-]*[\dA-Za-z])?\.)+[\dA-Za-z](?:[\dA-Za-z-]*[\dA-Za-z])?/
-        )
-      ) {
-        /* eslint:enable */
-        return null;
-      } else {
-        return { invalidEmailAddress: true };
-      }
-    }
-    return null;
-  }
+  formValidAndSubmitted = false;
+  shopForm = new FormGroup({
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+    username: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    address: new FormControl('', Validators.required),
+    address2: new FormControl('', Validators.required),
+    country: new FormControl('', Validators.required),
+    state: new FormControl('', Validators.required),
+    zip: new FormControl('', Validators.required),
+  });
 
   submit() {
     if (this.shopForm.valid) {

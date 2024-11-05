@@ -1,8 +1,12 @@
 {
   "name": "@ismaestro/ngx-scroll-to-first-invalid",
-  "version": "15.0.0",
+  "version": "18.0.0",
   "peerDependencies": {
-    "@angular/common": "6.x || 7.x || 8.x || 9.x || 10.x || 11.x || 12.x || 13.x || 14.x || 15.x",
-    "@angular/core": "6.x || 7.x || 8.x || 9.x || 10.x || 11.x || 12.x || 13.x || 14.x || 15.x"
-  }
+    "@angular/common": "6.x || 7.x || 8.x || 9.x || 10.x || 11.x || 12.x || 13.x || 14.x || 15.x || 16.x || 17.x || 18.x",
+    "@angular/core": "6.x || 7.x || 8.x || 9.x || 10.x || 11.x || 12.x || 13.x || 14.x || 15.x || 16.x || 17.x || 18.x"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
 }

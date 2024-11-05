@@ -1,7 +1,7 @@
 <p align="center">
-  <h1 align="center">@ngx-scroll-to-first-invalid</h1>
+  <h1 align="center">ngx-scroll-to-first-invalid</h1>
   <p align="center">
-    Angular directive to scroll to first invalid input inside a form on submit
+    Angular directive to scroll to first invalid input inside a form.
     <br>
     <br>
     <a href="https://ismaestro.github.io/ngx-scroll-to-first-invalid/">LIVE DEMO</a>
@@ -19,36 +19,27 @@
 
 ## Table of contents
 
-- [Status](#status)
-- [Quick start](#quick-start)
+- [Usage](#usage)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Creators](#creators)
 - [Copyright and license](#copyright-and-license)
 
-## Status
-
-![travis](https://travis-ci.org/Ismaestro/ngx-scroll-to-first-invalid.svg?branch=master)
-
-## Quick start
-
-First you need to install the npm module:
+## Usage
 
 ```sh
-npm i @ismaestro/ngx-scroll-to-first-invalid --save
+npm i @ismaestro/ngx-scroll-to-first-invalid --save-dev
 ```
 
-#### 1. Import the `NgxScrollToFirstInvalidModule`:
+#### 1. Import the directive in your component:
 
 ```ts
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { NgxScrollToFirstInvalidModule } from '@ismaestro/ngx-scroll-to-first-invalid';
-
-@NgModule({
-  imports: [BrowserModule, NgxScrollToFirstInvalidModule],
-  bootstrap: [AppComponent],
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  standalone: true,
+  imports: [NgxScrollToFirstInvalidDirective, ...],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppModule {}
 ```
 
 #### 2. Use the directive inside a form:
@@ -60,8 +51,10 @@ export class AppModule {}
 </form>
 ```
 
-Here there is an example using ngx-scroll-to-first-invalid
-[here](https://ismaestro.github.io/ngx-scroll-to-first-invalid)
+Here you have an example of a form using ngx-scroll-to-first-invalid.
+[DEMO](https://ismaestro.github.io/ngx-scroll-to-first-invalid)
+
+It also works with nested forms, and recently added support for Angular Ionic.
 
 ## Bugs and feature requests
 
@@ -76,11 +69,9 @@ and search for existing and closed issues. If your problem or idea is not addres
 
 - <https://github.com/ismaestro>
 
-<a href='https://ko-fi.com/S6S5LMVR' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-
 ## Copyright and license
 
-Code and documentation copyright 2018-2023 the authors. Code released under the
+Code released under the
 [MIT License](https://github.com/Ismaestro/ngx-scroll-to-first-invalid/blob/master/LICENSE).
 
 Enjoy :metal:
