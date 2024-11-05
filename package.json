@@ -6,7 +6,6 @@
     "start": "ng serve",
     "build:app": "ng build",
     "build:lib": "ng build ngx-scroll-to-first-invalid-lib",
-    "test": "ng test ngx-scroll-to-first-invalid-lib --code-coverage --no-watch",
     "lint": "ng lint",
     "release:patch": "standard-version --release-as patch && git push --follow-tags origin master",
     "release:minor": "standard-version --release-as minor && git push --follow-tags origin master",
