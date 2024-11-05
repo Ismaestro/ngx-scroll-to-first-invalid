@@ -4,9 +4,9 @@
     Angular directive to scroll to first invalid input inside a form.
     <br>
     <br>
-    <a href="https://ismaestro.github.io/ngx-scroll-to-first-invalid/">LIVE DEMO</a>
+    <a href="https://ngx-scroll-to-first-invalid.netlify.app/">LIVE DEMO</a>
     <br>
-    <a href="https://ismaestro.github.io/ngx-scroll-to-first-invalid/">
+    <a href="https://ngx-scroll-to-first-invalid.netlify.app/">
       <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
     </a>
     <br>
@@ -52,7 +52,7 @@ npm i @ismaestro/ngx-scroll-to-first-invalid --save-dev
 ```
 
 Here you have an example of a form using ngx-scroll-to-first-invalid.
-[DEMO](https://ismaestro.github.io/ngx-scroll-to-first-invalid)
+[DEMO](https://ngx-scroll-to-first-invalid.netlify.app)
 
 It also works with nested forms, and recently added support for Angular Ionic.
 
