@@ -4,12 +4,6 @@
     Angular directive to scroll to first invalid input inside a form.
     <br>
     <br>
-    <a href="https://ngx-scroll-to-first-invalid.ismaestro.com/">LIVE DEMO</a>
-    <br>
-    <a href="https://ngx-scroll-to-first-invalid.ismaestro.com/">
-      <img src="https://media.giphy.com/media/yNi7F2K2L2nRTiD4O2/giphy.gif" alt="Demo example"/>
-    </a>
-    <br>
     <a href="https://github.com/Ismaestro/ngx-scroll-to-first-invalid/issues/new?template=bug.md">Report bug</a>
     ·
     <a href="https://github.com/Ismaestro/ngx-scroll-to-first-invalid/issues/new?template=feature.md&labels=feature">Request feature</a>
@@ -20,6 +14,7 @@
 ## Table of contents
 
 - [Usage](#usage)
+- [Run locally](#run-locally)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Creators](#creators)
 - [Copyright and license](#copyright-and-license)
@@ -51,10 +46,20 @@ npm i @ismaestro/ngx-scroll-to-first-invalid --save-dev
 </form>
 ```
 
-Here you have an example of a form using ngx-scroll-to-first-invalid.
-[DEMO](https://ngx-scroll-to-first-invalid.ismaestro.com)
-
 It also works with nested forms, and recently added support for Angular Ionic.
+
+## Run locally
+
+There is no public demo. The repository contains the library
+(`projects/ngx-scroll-to-first-invalid-lib`) and a demo app in `src/` that uses it.
+
+Requirements: Node.js and npm.
+
+```sh
+npm i
+npm start          # serves the demo app at http://localhost:4200
+npm run build:lib  # builds the library into dist/
+```
 
 ## Bugs and feature requests
 
